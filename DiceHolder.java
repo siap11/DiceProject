@@ -1,3 +1,3 @@
-class DiceHolder{
+public class DiceHolder{
 
 }
