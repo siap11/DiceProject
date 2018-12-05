@@ -19,11 +19,13 @@ public class DiceHolder{
 	}
 
 	public void shake(){
+		for(int i = 0; i < holder.size(); i++){
 
+		}
 	}
 
 	public String toString(){
-
+		String holder = "";
 
 	}
 
