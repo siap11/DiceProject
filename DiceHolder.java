@@ -5,7 +5,7 @@ public class DiceHolder{
 	private ArrayList<Die> holder;
 
 	public DiceHolder(){
-
+		holder = new ArrayList<Die>();
 	}
 
 	public int addDie(Die die){
@@ -18,5 +18,13 @@ public class DiceHolder{
 		return 1;
 	}
 
+	public void shake(){
+
+	}
+
+	public String toString(){
+
+
+	}
 
 }
