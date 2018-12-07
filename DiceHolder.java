@@ -9,23 +9,33 @@ public class DiceHolder{
 	}
 
 	public int addDie(Die die){
-		for(int i = 0; i < 6; i++){
-			holder.add(die);
-			if(holder.size() < 6)
-				return -1;
-		}
+		holder.add(die);
+		System.out.println(die.toString());
 
-		return 1;
+		if(holder.size() > 5){
+			return -1;
+		}
+		else{
+			return 1;
+		}
 	}
 
 	public void shake(){
+		Die tempDie;
 		for(int i = 0; i < holder.size(); i++){
-
+			tempDie = holder.get(i);
+			tempDie.roll();
 		}
 	}
 
 	public String toString(){
-		String holder = "";
+		String holderString = "";
+		Die tempDie;
+		for(int i = 0; i < holder.size(); i++){
+			tempDie = holder.get(i);
+			holderString = holder + tempDie.toString() + "\n";
+		}
+		return holderString;
 
 	}
 
