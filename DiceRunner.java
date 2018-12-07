@@ -2,6 +2,7 @@ public class DiceRunner{
 	public static void main(String[]args){
 
 	// Test 1
+		System.out.println("Test 1:");
 		Die die = new Die();
 		Die die2 = new Die();
 
@@ -27,6 +28,7 @@ public class DiceRunner{
 		System.out.println();
 
 	// Test 2
+		System.out.println("Test 2:");
 		DiceHolder diceHolder = new DiceHolder();
 		int returnVal = 1;
 
@@ -34,20 +36,22 @@ public class DiceRunner{
 		int sides;
 
 		do{
-			sides = (int)(Math.random()*16)+4;
+			sides = (int)(Math.random()*20)+4;
 			newDie = new Die(sides);
-			System.out.println("adding die");
+
+			System.out.println("Adding die:");
 			System.out.print(diceHolder);
+
 			returnVal = diceHolder.addDie(newDie);
 			System.out.println();
 		}while(returnVal == 1);
 
-		System.out.println("b4 shake");
+		System.out.println("Before shake:");
 		System.out.println(diceHolder);
 
 
 		diceHolder.shake();
-		System.out.println("after shake");
+		System.out.println("After shake:");
 		System.out.println(diceHolder);
 
 	}
