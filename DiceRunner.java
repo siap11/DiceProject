@@ -24,7 +24,31 @@ public class DiceRunner{
 
 		System.out.println("It took " + rollCount + " rolls to get snake eyes.");
 
+		System.out.println();
 
+	// Test 2
+		DiceHolder diceHolder = new DiceHolder();
+		int returnVal = 1;
+
+		Die newDie;
+		int sides;
+
+		do{
+			sides = (int)(Math.random()*16)+4;
+			newDie = new Die(sides);
+			System.out.println("adding die");
+			System.out.print(diceHolder);
+			returnVal = diceHolder.addDie(newDie);
+			System.out.println();
+		}while(returnVal == 1);
+
+		System.out.println("b4 shake");
+		System.out.println(diceHolder);
+
+
+		diceHolder.shake();
+		System.out.println("after shake");
+		System.out.println(diceHolder);
 
 	}
 }

@@ -33,7 +33,7 @@ public class DiceHolder{
 		Die tempDie;
 		for(int i = 0; i < holder.size(); i++){
 			tempDie = holder.get(i);
-			holderString = holder + tempDie.toString() + "\n";
+			holderString = holderString + tempDie.toString() + "\n";
 		}
 		return holderString;
 
